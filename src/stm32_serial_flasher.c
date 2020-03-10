@@ -65,6 +65,11 @@ char    c,filename[32],serial_port[64];
         }
     }
 
+    if( argc == 1 )
+    {
+        usage();
+        return -1;
+    }
     if ( optflag == 2)
     {
         if ( get_file(filename) != 0 )
